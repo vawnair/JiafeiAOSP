@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+# JiafeiAOSP
+JiafeiAOSP is an Android Open Source Project based ROM.
 
-You can use the [editor on GitHub](https://github.com/vawnair/JiafeiAOSP/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## prerequisites
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Get [adb](https://developer.android.com/studio/releases/platform-tools).
 
-### Markdown
+## Installation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Get [twrp](https://twrp.me) for your device
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Boot into twrp 
+```bash
+adb reboot bootloader/fastboot
+fastboot boot twrp.img
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Navigate into Advanced => ADB Sideload, Wipe Dalvik and Cache, Then swipe to start sideload.
 
-### Jekyll Themes
+On your computer's console/command line, type:
+```bash
+adb sideload JiafeiAOSP.zip
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vawnair/JiafeiAOSP/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Reboot to apply changes, now tada! 
+You're good to go.
 
-### Support or Contact
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Please make sure to update tests as appropriate.
+
+## License
+[GNU](https://choosealicense.com/licenses/gpl-3.0/)
